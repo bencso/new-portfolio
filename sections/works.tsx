@@ -7,6 +7,9 @@ interface Work {
   img: string;
 }
 
+// TODO: Hovernél a kép kap egy kis sárha opacitys dolgot (#FF6200 20%), illetve lesz egy hover cursor (megnézés szöveggel),
+// TODO: Illetve kell még egy olyan hogy hovernél a role átváltozik megnézésre stagger animációval
+
 const works: Work[] = [
   {
     title: "PROJEKT 1",
