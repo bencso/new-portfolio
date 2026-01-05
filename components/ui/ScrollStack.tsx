@@ -65,7 +65,7 @@ const ServicesStackCard = ({
 }) => {
   const container = useRef<HTMLDivElement>(null);
 
-  const scale = useTransform(progress, range, [1, targetScale]);
+    const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
     <div
@@ -135,6 +135,7 @@ export default function ServicesStack() {
     <ReactLenis root>
       <div ref={container}>
         {services.map((service, i) => {
+          const isLastItem = i === services.length - 1;
           return (
             <ServicesStackCard
               key={`service_${i}`}
@@ -142,7 +143,7 @@ export default function ServicesStack() {
               service={service}
               progress={scrollYProgress}
               range={[0, 1]}
-              targetScale={1}
+              targetScale={isLastItem ? 1 : 1}
             />
           );
         })}

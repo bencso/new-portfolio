@@ -1,4 +1,7 @@
-import { TextStaggerHover } from "@/components/ui/StaggeredText";
+"use client";
+
+import { HoverCursor } from "@/components/ui/HoverCursor";
+import { useRef } from "react";
 
 interface Work {
   title: string;
@@ -54,6 +57,7 @@ export default function OurWorks() {
         : 0;
     })[0].year,
   };
+  const workRef = useRef<(HTMLDivElement | null)[]>([]);
 
   return (
     <section className="gap-2 px-12 py-12 flex flex-col bg-black">
@@ -74,17 +78,32 @@ export default function OurWorks() {
           })
           .map((work, index) => {
             return (
-              <div key={index} className="gap-4 flex flex-col">
-                <img src={work.img} />
+                <div key={index} className="gap-4 flex flex-col group">
+                <HoverCursor targetRef={workRef} />
+                <div 
+                  className="relative overflow-hidden"
+                  ref={(el) => {
+                  if (workRef.current) {
+                    workRef.current[index] = el;
+                  }
+                  }}
+                >
+                  <img
+                  src={work.img}
+                  alt={work.title}
+                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-[#FF6200] opacity-0 group-hover:opacity-10 pointer-events-none transition-opacity duration-300" />
+                </div>
                 <div className="gap-0 flex flex-col">
                   <h4 className="uppercase mb-0 mt-0 pt-0 pb-0 text-white">
-                    {work.title} | {work.year.toString()}
+                  {work.title} | {work.year.toString()}
                   </h4>
                   <h4 className="uppercase mb-0 mt-0 pt-0 pb-0 text-white">
-                    {work.role}
+                  {work.role}
                   </h4>
                 </div>
-              </div>
+                </div>
             );
           })}
       </div>
