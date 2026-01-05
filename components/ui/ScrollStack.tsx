@@ -23,7 +23,7 @@ const services: Service[] = [
     description:
       "A cél, hogy a látogató már az első kattintásnál értse, mi merre van, szívesen használja az oldalt, és könnyen eljusson odáig, amit Ön szeretne.",
     src: "https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D",
-    reference: "Teszt"
+    reference: "PROJEKT 2 • VISUALARTISTS",
   },
   {
     title: "Service 2",
@@ -35,6 +35,7 @@ const services: Service[] = [
     description:
       "A cél, hogy a látogató már az első kattintásnál értse, mi merre van, szívesen használja az oldalt, és könnyen eljusson odáig, amit Ön szeretne.",
     src: "https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D",
+    reference: "PROJEKT 2 • VISUALARTISTS",
   },
   {
     title: "Service 3",
@@ -69,35 +70,54 @@ const ServicesStackCard = ({
   return (
     <div
       ref={container}
-      className={"sticky flex items-start justify-center"}
+      className={"sticky flex items-start justify-center color-dark-gray"}
       style={{ top: `calc(45px + ${i * 120}px)` }}
     >
       <motion.div
         style={{
           scale,
         }}
-        className={`${i>0 && "border-t"} w-full justify-between relative flex flex-row overflow-hidden pt-4 bg-white`}
+        className={`${
+          i > 0 && "border-t border-[#575757]"
+        } w-full justify-between relative flex flex-row overflow-hidden pt-4 bg-white`}
       >
         <div className="pb-12 min-w-3/4 max-w-3/4">
-          <p className="mb-.5" style={{ fontSize: 14 }}>0{i + 1}</p>
-          <h2 className="mb-4 lg:mb-4 xl:mb-7 xxl:mb-12 min-w-2/3 break-all max-w-2/3 text-wrap text-ellipsis">{service.title}</h2>
+          <p className="mb-.5" style={{ fontSize: 14 }}>
+            0{i + 1}
+          </p>
+          <h2 className="mb-4 lg:mb-4 xl:mb-7 xxl:mb-12 min-w-2/3 break-all max-w-2/3 text-wrap text-ellipsis">
+            {service.title}
+          </h2>
           <ol className="list-none mb-4 lg:mb-4 xl:mb-7">
             {service.services.map((service, index) => {
-              return <li key={index} style={{
-                fontWeight: 800,
-                fontSize: 18
-              }} className="before:content-['/']"> {service}</li>;
+              return (
+                <li
+                  key={index}
+                  style={{
+                    fontWeight: 800,
+                    fontSize: 18,
+                  }}
+                  className="before:content-['/']"
+                >
+                  {" "}
+                  {service}
+                </li>
+              );
             })}
           </ol>
-          <p className="w-2/3" style={{ fontSize: 18, lineHeight: 1.3 }}>{service.description}</p>
+          <p className="w-2/3" style={{ fontSize: 18, lineHeight: 1.3 }}>
+            {service.description}
+          </p>
         </div>
         <div className="content-end pt-12 min-w-1/4 max-w-1/4">
-                  <p className="pb-2 text-end" style={{ fontSize: 15 }}>{service.reference}</p>
-           <img
-          src={service.src}
-          alt={service.title}
-          className="h-[450px] w-100 object-cover"
-        />
+          <p className="pb-2 text-end" style={{ fontSize: 15 }}>
+            {service.reference}
+          </p>
+          <img
+            src={service.src}
+            alt={service.title}
+            className="h-[450px] w-100 object-cover"
+          />
         </div>
       </motion.div>
     </div>

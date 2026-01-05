@@ -2,7 +2,7 @@ import TextScrollBase from "../components/ui/TextScrollBase";
 
 export default function AboutMe() {
   return (
-    <section className="gap-12 flex flex-col">
+    <section className="gap-12 px-12 flex flex-col">
         <h3 className="uppercase">Rólam</h3>
       <TextScrollBase
       className="w-full max-w-3xl mx-auto text-[24px]/[28px] font-semibold"

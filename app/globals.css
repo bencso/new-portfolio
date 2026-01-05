@@ -27,6 +27,7 @@
   --color-destructive: var(--destructive);
   --color-accent-foreground: var(--accent-foreground);
   --color-accent: var(--accent);
+  --color-dark-gray: var(--dark-gray);
   --color-muted-foreground: var(--muted-foreground);
   --color-muted: var(--muted);
   --color-secondary-foreground: var(--secondary-foreground);
@@ -47,7 +48,7 @@
 }
 
 :root {
-  --color-white: #FEFEFE;
+  --color-white: #fefefe;
   --dark-gray: #575757;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -56,7 +57,7 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: #FF6200;
+  --primary: #ff6200;
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
@@ -129,17 +130,13 @@
 h4 {
   font-size: 16px;
   font-weight: 500;
-  line-height: 27px;
   letter-spacing: -0.005em;
   width: 100%;
-  padding-bottom: 2px;
-  color: var(--dark-gray);
-  border-bottom: 1px solid var(--dark-gray);
 }
 
-h3{
+h3 {
   color: var(--dark-gray);
-    font-size: 16px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 27px;
   letter-spacing: -0.005em;
@@ -147,7 +144,7 @@ h3{
   text-align: center;
 }
 
-h2{
+h2 {
   font-size: 72px;
   line-height: 0.8;
   color: var(--primary);
