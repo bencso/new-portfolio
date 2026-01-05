@@ -12,7 +12,7 @@ const works: Work[] = [
     title: "PROJEKT 1",
     year: 2025,
     role: "Webfejlesztés",
-    img: "/projects/testproject.png",
+    img: "/projects/project2.png",
   },
   {
     title: "PROJEKT 2",
