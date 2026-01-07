@@ -20,7 +20,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="hu" className={darkergrotesque.variable}>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        {children}</body>
     </html>
   );
 }

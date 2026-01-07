@@ -44,11 +44,12 @@ const AccordionContent = forwardRef<
 >(({ className, children, ...props }, ref) => (
   <RadixAccordion.Content
     ref={ref}
-    className="overflow-hidden text-sm transition-all duration-800 data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+    className="overflow-hidden text-sm accordion-content"
     {...props}
   >
     <div className={cn("pb-4 pt-0", className)}>{children}</div>
   </RadixAccordion.Content>
 ));
+AccordionContent.displayName = "AccordionContent";
 
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };

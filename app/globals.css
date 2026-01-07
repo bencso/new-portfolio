@@ -45,22 +45,30 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
-  --animate-accordion-down: accordion-down 0.2s ease-out;
-  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-accordion-down: accordion-down 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  --animate-accordion-up: accordion-up 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   @keyframes accordion-down {
   from {
     height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
     }
   to {
     height: var(--radix-accordion-content-height);
+    opacity: 1;
+    transform: translateY(0);
     }
   }
   @keyframes accordion-up {
   from {
     height: var(--radix-accordion-content-height);
+    opacity: 1;
+    transform: translateY(0);
     }
   to {
     height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
     }
   }
 }
@@ -137,11 +145,48 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+  }
+  
   * {
     @apply border-border outline-ring/50;
   }
+  
   body {
     @apply bg-background text-foreground;
+    overscroll-behavior: none;
+  }
+}
+
+.accordion-content[data-state="open"] {
+  animation: slowAccordionDown 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.accordion-content[data-state="closed"] {
+  animation: slowAccordionUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes slowAccordionDown {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+}
+
+@keyframes slowAccordionUp {
+  from {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
   }
 }
 
