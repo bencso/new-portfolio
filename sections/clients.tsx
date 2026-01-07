@@ -45,7 +45,7 @@ export function OurClients() {
           <AccordionItem
             value={client.id}
             key={client.id}
-            className="data-[state=open]:text-white data-[state=open]:bg-black"
+            className="data-[state=open]:text-white data-[state=open]:bg-black border-b border-[#575757] data-[state=open]:border-none"
           >
             <AccordionTrigger className="data-[state=open]:text-white px-12 py-6 hover:no-underline cursor-pointer [data-slot=accordion-trigger] [&>svg]:hidden">
               <div className="flex flex-row gap-4 w-full items-center">
@@ -53,7 +53,7 @@ export function OurClients() {
                   <p className="uppercase text-start" style={{ fontSize: 16 }}>
                     {client.id}
                   </p>
-                  <p className="text-start uppercase" style={{ fontSize: 30 }}>
+                  <p className="text-start uppercase" style={{ fontSize: 26 }}>
                     {client.name}
                   </p>
                 </div>
@@ -67,7 +67,7 @@ export function OurClients() {
             <AccordionContent className="p-0 items-end flex flex-col w-full">
               <div
                 className="grid pt-10 gap-10 ps-28 lg:gap-30 md:grid-cols-2 px-12 pb-20 w-full"
-                key="01"
+                key={client.id}
               >
                 <div className="space-y-0 pr-6 text-lg">
                   <p
@@ -77,7 +77,9 @@ export function OurClients() {
                     {" "}
                     kérés
                   </p>
-                  <p className="text-justify">{client.work}</p>
+                  <p className="text-justify" style={{ fontSize: 20 }}>
+                    {client.work}
+                  </p>
                 </div>
                 <div className="space-y-0 pr-6 text-lg">
                   <p
@@ -87,10 +89,12 @@ export function OurClients() {
                     {" "}
                     vélemény
                   </p>
-                  <p className="text-justify">{client.review}</p>
+                  <p className="text-justify" style={{ fontSize: 20 }}>
+                    {client.review}
+                  </p>
                 </div>
               </div>
-              <Button className="rounded-r-none rounded-b-none h-12 text-md cursor-pointer px-7">
+              <Button className="rounded-r-none rounded-b-none h-12 text-[16px] cursor-pointer text-black px-7">
                 Kezdjük el a közös munkát!
               </Button>
             </AccordionContent>

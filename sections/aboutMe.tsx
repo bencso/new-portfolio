@@ -5,7 +5,7 @@ export default function AboutMe() {
     <section className="gap-12 px-12 flex flex-col">
         <h3 className="uppercase">Rólam</h3>
       <TextScrollBase
-      className="w-full max-w-3xl mx-auto text-[24px]/[28px] font-semibold"
+      className="w-full max-w-3xl mx-auto text-[26px]/[28px] font-semibold"
         node={
           <div>
             <p>

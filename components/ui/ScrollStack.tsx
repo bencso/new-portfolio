@@ -95,7 +95,7 @@ const ServicesStackCard = ({
                   key={index}
                   style={{
                     fontWeight: 800,
-                    fontSize: 18,
+                    fontSize: 20,
                   }}
                   className="before:content-['/']"
                 >
@@ -105,12 +105,12 @@ const ServicesStackCard = ({
               );
             })}
           </ol>
-          <p className="w-2/3" style={{ fontSize: 18, lineHeight: 1.3 }}>
+          <p className="w-2/3" style={{ fontSize: 20, lineHeight: 1.3 }}>
             {service.description}
           </p>
         </div>
         <div className="content-end pt-12 min-w-1/4 max-w-1/4">
-          <p className="pb-2 text-end" style={{ fontSize: 15 }}>
+          <p className="pb-2 text-end" style={{ fontSize: 16 }}>
             {service.reference}
           </p>
           <img

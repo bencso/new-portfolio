@@ -13,7 +13,7 @@ const AccordionItem = forwardRef<
 >(({ className, ...props }, ref) => (
   <RadixAccordion.Item
     ref={ref}
-    className={cn("border-b border-[#575757]", className)}
+    className={className}
     {...props}
   />
 ));
