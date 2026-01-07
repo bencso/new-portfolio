@@ -9,6 +9,11 @@ interface Social {
   link: string;
 }
 
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
 export default function Footer() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -20,16 +25,27 @@ export default function Footer() {
       link: "https://www.instagram.com/bencsoworks/",
     },
     {
-      title: "Dribble",
-      link: "https://dribbble.com/Bencsoo",
+      title: "LinkedIn",
+      link: "https://linkedin.com/in/bencso",
     },
+  ];
+
+    const faqs: FAQ[] = [
+{
+  question: "MENNYI IDŐ, ÉS MENNYI PÉNZ?",
+  answer: "Átlagos projekt: 150–250 000 Ft · 2–12 hét </br> (a pontos idő és összeg a projekt méretétől függ)"
+},
+{
+  question: "VÁLASZIDŐ",
+  answer: "Amennyiben elérhető vagyok, igyekszem 24 órán belül válaszolni."
+}
   ];
   return (
     <footer className="gap-2 px-12 py-12 flex flex-col bg-black">
       <div className="border-b pb-2 border-white flex-row flex">
         <h4 className="uppercase text-white">ÖN IS LEHET A KÖVETKEZŐ</h4>
       </div>
-      <div className="flex flex-col py-8 gap-12">
+      <div className="flex flex-col pt-8 gap-12">
         <div className="flex flex-col *:leading-none gap-1">
           <p
             className="text-end text-[#B7B7B7] font-semibold"
@@ -45,81 +61,81 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-12">
-          <div className="gap-4 flex flex-col">
-            <div className="grid grid-cols-2">
-              <p
-                className="text-[#B7B7B7] uppercase font-semibold w-1/2"
-                style={{ fontSize: 16 }}
-              >
-                MENNYI IDŐ, ÉS MENNYI PÉNZ?
-              </p>
-              <p
-                className="text-start text-white font-medium leading-none"
-                style={{ fontSize: 20 }}
-              >
-                Átlagos projekt: 150–250 000 Ft · 2–12 hét (a pontos idő és
-                összeg a projekt méretétől függ)
-              </p>
-            </div>
-            <div className="grid grid-cols-2">
+        <div className="grid grid-cols-2 gap-16">
+          <div className="flex flex-col gap-8">
+{
+  faqs.map((faq, index)=>{
+    return (
+                  <div key={index} className="flex flex-col gap-2">
               <p
                 className="text-[#B7B7B7] uppercase font-semibold"
-                style={{ fontSize: 16 }}
+                style={{ fontSize: 18 }}
               >
-                VÁLASZIDŐ
+                {faq.question}
               </p>
-              <p
-                className="text-start text-white font-medium leading-none"
-                style={{ fontSize: 20 }}
-              >
-                Amennyiben elérhető vagyok, igyekszem 24 órán belül válaszolni.
-              </p>
+              <div className="flex flex-col gap-1">
+                <p
+                  className="text-white font-medium leading-tight"
+                  style={{ fontSize: 18 }}
+                >
+                <span dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                </p>
+              </div>
             </div>
+    )
+  })
+}
           </div>
-          <form className="flex flex-col gap-6 justify-end items-end">
+          <form className="flex flex-col gap-4">
             <FloatingInput
-              label="Ön neve"
+              label="ÖN NEVE"
               type="text"
               value={name}
+              className="pb-1"
               onChange={setName}
               required={true}
             />
             <FloatingInput
-              label="Ön EMAIL CÍM-e"
+              label="EMAIL CÍM"
               type="email"
               value={email}
+              className="pb-1"
               onChange={setEmail}
               required={true}
             />
             <FloatingInput
-              label="Ön MENNYIT SZÁNNA A PROJEKTRE? (HUF)"
-              type="number"
+              label="MENNYIT SZÁNNA A PROJEKTRE?"
+              type="text"
               value={price}
               onChange={setPrice}
+              className="pb-1"
               required={true}
             />
             <FloatingTextarea
-              label="PROJEKTRŐL LEÍRÁS"
+              label="ÜZENET"
               value={message}
+              className="pb-1"
               onChange={setMessage}
             />
             <button
               type="submit"
               title="Küldés"
-              className="px-12 py-2 bg-primary w-fit text-end font-semibold text-black"
-              style={{ fontSize: 20 }}
+              className="px-8 py-3 bg-primary w-full font-semibold text-black hover:bg-white transition-all duration-300 ease-in-out"
+              style={{ fontSize: 18 }}
             >
               Küldjük el!
             </button>
           </form>
         </div>
 
-        <div className="space-y-[0px]">
+        <div className="space-y-[-10px]">
           <div className="flex flex-col gap-0">
-            {socials.map((social) => {
+            {socials.map((social, index) => {
               return (
-                <div className="relative w-fit after:absolute after:bg-white after:bottom-[2px] after:left-0 after:h-px after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-500">
+                <div
+                  key={index}
+                  className="relative w-fit after:absolute after:bg-white after:bottom-[2px] after:left-0 after:h-px after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-500"
+                >
                   <a
                     href={social.link}
                     className="text-white uppercase font-medium"
@@ -141,7 +157,10 @@ export default function Footer() {
               </p>
             </div>
             <div className="flex flex-col justify-end text-end gap-0">
-              <p className="text-[#B7B7B7] uppercase font-semibold">
+              <p
+                className="text-[#B7B7B7] font-semibold"
+                style={{ fontSize: 16 }}
+              >
                 Írjon nekem:
               </p>
               <div className="relative w-fit after:absolute after:bg-white after:bottom-[2px] after:left-0 after:h-px after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-500">
@@ -155,7 +174,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="flex flex-row justify-between">
+          <div className="flex flex-row mt-12 justify-between">
             <div className="flex flex-row gap-4">
               <div className="relative w-fit after:absolute after:bg-white after:bottom-[2px] after:left-0 after:h-px after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-500">
                 <a
