@@ -30,15 +30,15 @@ export default function Footer() {
     },
   ];
 
-    const faqs: FAQ[] = [
-{
-  question: "MENNYI IDŐ, ÉS MENNYI PÉNZ?",
-  answer: "Átlagos projekt: 150–250 000 Ft · 2–12 hét </br> (a pontos idő és összeg a projekt méretétől függ)"
-},
-{
-  question: "VÁLASZIDŐ",
-  answer: "Amennyiben elérhető vagyok, igyekszem 24 órán belül válaszolni."
-}
+  const faqs: FAQ[] = [
+    {
+      question: "MENNYI PÉNZ, ÉS MENNYI IDŐ?",
+      answer: "Átlagos projekt: 150–250 000 Ft · 2–12 hét<br />(a pontos idő és összeg a projekt méretétől függ)",
+    },
+    {
+      question: "VÁLASZIDŐ",
+      answer: "Amennyiben elérhető vagyok, igyekszem 24 órán belül válaszolni.",
+    },
   ];
   return (
     <footer className="gap-2 px-12 py-12 flex flex-col bg-black">
@@ -47,76 +47,66 @@ export default function Footer() {
       </div>
       <div className="flex flex-col pt-8 gap-12">
         <div className="flex flex-col *:leading-none gap-1">
-          <p
-            className="text-end text-[#B7B7B7] font-semibold"
-            style={{ fontSize: 26 }}
-          >
+          <p className="text-end text-[#B7B7B7] font-semibold" style={{ fontSize: 26 }}>
             Van egy projekt ötlete?
           </p>
-          <p
-            className="text-end text-white font-semibold"
-            style={{ fontSize: 26 }}
-          >
+          <p className="text-end text-white font-semibold" style={{ fontSize: 26 }}>
             Készítsünk együtt valami szépet!{" "}
           </p>
         </div>
 
         <div className="grid grid-cols-2 gap-16">
           <div className="flex flex-col gap-8">
-{
-  faqs.map((faq, index)=>{
-    return (
-                  <div key={index} className="flex flex-col gap-2">
-              <p
-                className="text-[#B7B7B7] uppercase font-semibold"
-                style={{ fontSize: 18 }}
-              >
-                {faq.question}
-              </p>
-              <div className="flex flex-col gap-1">
-                <p
-                  className="text-white font-medium leading-tight"
-                  style={{ fontSize: 18 }}
-                >
-                <span dangerouslySetInnerHTML={{ __html: faq.answer }} />
-                </p>
-              </div>
-            </div>
-    )
-  })
-}
+            {faqs.map((faq, index) => {
+              return (
+                <div key={index} className="flex flex-col gap-2">
+                  <p className="text-[#B7B7B7] uppercase font-semibold" style={{ fontSize: 18 }}>
+                    {faq.question}
+                  </p>
+                  <div className="flex flex-col gap-1">
+                    <p className="text-white font-medium leading-tight" style={{ fontSize: 18 }}>
+                      <span dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
           <form className="flex flex-col gap-4">
-            <FloatingInput
-              label="ÖN NEVE"
-              type="text"
-              value={name}
-              className="pb-1"
-              onChange={setName}
-              required={true}
-            />
-            <FloatingInput
-              label="EMAIL CÍM"
-              type="email"
-              value={email}
-              className="pb-1"
-              onChange={setEmail}
-              required={true}
-            />
-            <FloatingInput
-              label="MENNYIT SZÁNNA A PROJEKTRE?"
-              type="text"
-              value={price}
-              onChange={setPrice}
-              className="pb-1"
-              required={true}
-            />
-            <FloatingTextarea
-              label="ÜZENET"
-              value={message}
-              className="pb-1"
-              onChange={setMessage}
-            />
+            <div className="pb-4">
+              <FloatingInput
+                label="ÖN NEVE"
+                type="text"
+                value={name}
+                onChange={setName}
+                required={true}
+              />
+            </div>
+            <div className="pb-4">
+              <FloatingInput
+                label="EMAIL CÍM"
+                type="email"
+                value={email}
+                onChange={setEmail}
+                required={true}
+              />
+            </div>
+            <div className="pb-4">
+              <FloatingInput
+                label="MENNYIT SZÁNNA A PROJEKTRE?"
+                type="text"
+                value={price}
+                onChange={setPrice}
+                required={true}
+              />
+            </div>
+            <div className="pb-4">
+              <FloatingTextarea
+                label="ÜZENET"
+                value={message}
+                onChange={setMessage}
+              />
+            </div>
             <button
               type="submit"
               title="Küldés"
@@ -149,18 +139,13 @@ export default function Footer() {
           </div>
           <div className="flex flex-row align-end justify-between">
             <div className="flex flex-col -space-y-[25px]">
-              <p className="text-white font-black text-[100px] leading-none">
-                BENCSO
-              </p>
+              <p className="text-white font-black text-[100px] leading-none">BENCSO</p>
               <p className="text-white font-black text-[100px] leading-none">
                 STUDIO©<span className="text-primary font-semibold">2025</span>
               </p>
             </div>
             <div className="flex flex-col justify-end text-end gap-0">
-              <p
-                className="text-[#B7B7B7] font-semibold"
-                style={{ fontSize: 16 }}
-              >
+              <p className="text-[#B7B7B7] font-semibold" style={{ fontSize: 16 }}>
                 Írjon nekem:
               </p>
               <div className="relative w-fit after:absolute after:bg-white after:bottom-[2px] after:left-0 after:h-px after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-500">

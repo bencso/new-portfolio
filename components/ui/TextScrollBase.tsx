@@ -28,7 +28,7 @@ export default function TextScrollBase({
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start center", "end center"],
+    offset: ["start 0.3", "1 center"],
   });
 
   let text: string[] = [];
