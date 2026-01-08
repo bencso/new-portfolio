@@ -28,7 +28,7 @@ export default function TextScrollBase({
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start 0.3", "1 center"],
+    offset: ["start 0.25", "1 center"],
   });
 
   let text: string[] = [];
@@ -89,7 +89,7 @@ const Char = ({ children, progress, range }: CharType) => {
       <span className={cn("absolute", "opacity-10")}>{children}</span>
       <motion.span
         style={{
-          transition: "all .5s",
+          transition: "all 0.8s ease-out",
           opacity: opacity,
         }}
       >

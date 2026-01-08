@@ -17,6 +17,8 @@ export default function AboutMe() {
             </p>
             <br/>
             <br/>
+            <br/>
+            <br/>
             <p>
               Budapesten élek, és különösen szeretem, ha egy projektben van tér
               kísérletezni – új betűtípusokkal, elrendezésekkel vagy finom
