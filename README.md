@@ -21,16 +21,14 @@ A következő elemek még implementálásra várnak:
 
 ## 🛠️ Technológiák
 
-- **Frontend framework** - Next.JS
-- **Styling** - CSS/SCSS, Tailwind
-- **Animációk** - Framer Motion és CSS transitions
+- **Next.JS** - Frontend framework
+- **CSS/SCSS, Tailwind** -  Styling
+- **Framer Motion, CSS transitions** - Animációk
 
 ## 🎯 Célcsoport
 
-- Potenciális ügyfelek/munkáltatók
-- Szakmai kapcsolatok
-- Fejlesztő közösség
-- Saját márkaépítés
+- Potenciális ügyfelek/munkáltatók *(Saját márkaépítés céllal készül)*
+- Szakmai kapcsolatok 
 
 ## 📄 Licensz
 MIT License - Szabadon használható és módosítható
@@ -43,7 +41,7 @@ MIT License - Szabadon használható és módosítható
 
 ## 💡 Megjegyzések
 
-A portfolio oldal egy örök projekt - mindig van mit finomítani, javítani, újragondolni. A minimalista megközelítés időtlen és univerzális, ami hosszútávon is működik. A lényeg: ne legyen túlbonyolított, hanem mutasd meg tisztán a munkáidat és képességeidet.
+A portfolio oldal egy örök projekt - mindig van mit finomítani, javítani, újragondolni rajta. A minimalista megközelítés időtlen, ami hosszútávon is működik. A lényeg: ne legyen túlbonyolított, hanem megmutassam a munkáimat és képességeimet.
 
 ***
 
