@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# New Portfolio 💼✨
 
-## Getting Started
+> Fejlesztői portfolio weboldalam terve
 
-First, run the development server:
+## 🎯 Projekt célja
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Egy tökéletes egyensúlyt kereső személyes portfolio oldal létrehozása, amely minimalista, jól néz ki, de nem túlanimált - professzionális megjelenés egyéni stílussal.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✅ Elkészült funkciók
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 🏠 **Főoldal** - Az alapvető bemutatkozó oldal kész
+- 🎨 **Minimalista design** - Letisztult megjelenés
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚧 Tervezett fejlesztések
 
-## Learn More
+A következő elemek még implementálásra várnak:
 
-To learn more about Next.js, take a look at the following resources:
+### Alapvető oldalak
+- 📁 **Portfolio/Projektek oldal** - "Munkák bemutatása playground stílusban"
+- 👤 **About/Rólam oldal** - Részletesebb bemutatkozás, skills, tapasztalat
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Technológiák
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Frontend framework** - Next.JS
+- **Styling** - CSS/SCSS, Tailwind
+- **Animációk** - Framer Motion és CSS transitions
 
-## Deploy on Vercel
+## 🎯 Célcsoport
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Potenciális ügyfelek/munkáltatók
+- Szakmai kapcsolatok
+- Fejlesztő közösség
+- Saját márkaépítés
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 Licensz
+MIT License - Szabadon használható és módosítható
+
+***
+
+**Státusz:** 🔨 Fejlesztés/áttervezés alatt
+
+***
+
+## 💡 Megjegyzések
+
+A portfolio oldal egy örök projekt - mindig van mit finomítani, javítani, újragondolni. A minimalista megközelítés időtlen és univerzális, ami hosszútávon is működik. A lényeg: ne legyen túlbonyolított, hanem mutasd meg tisztán a munkáidat és képességeidet.
+
+***
+
+**⭐ Ha tetszik a projekt, örülök egy csillagnak!**
