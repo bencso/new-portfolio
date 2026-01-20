@@ -8,7 +8,7 @@ Egy tökéletes egyensúlyt kereső személyes portfolio oldal létrehozása, am
 
 ## ✅ Elkészült funkciók
 
-- 🏠 **Főoldal** - Az alapvető bemutatkozó oldal kész
+- 🏠 **Főoldal** - Az alapvető bemutatkozó oldal
 - 🎨 **Minimalista design** - Letisztult megjelenés
 
 ## 🚧 Tervezett fejlesztések
