@@ -1,6 +1,6 @@
 # New Portfolio 💼✨
 
-> Fejlesztői portfolio weboldalam terve
+> Fejlesztői portfolio weboldalam tervezete
 
 ## 🎯 Projekt célja
 
